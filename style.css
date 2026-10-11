@@ -1,0 +1,72 @@
+*{box-sizing:border-box}body{margin:0;font-family:"Segoe UI",Tahoma,Arial,sans-serif;background:#fff8ef;color:#2b2b2b;line-height:1.9}
+.stars-bg{position:fixed;inset:0;pointer-events:none;opacity:.5;background-image:radial-gradient(#ffd166 2px,transparent 2px);background-size:38px 38px;z-index:0}
+.navbar{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:3px solid #ffd166}
+.nav-inner{max-width:1150px;margin:auto;display:flex;align-items:center;gap:18px;padding:10px 16px;flex-wrap:wrap}
+.logo{font-weight:900;font-size:22px}.logo small{display:block;font-size:12px;color:#888;font-weight:400}
+.links{display:flex;gap:10px;flex-wrap:wrap;flex:1}.links a{text-decoration:none;color:#444;font-weight:700;background:#f4f4f4;padding:6px 12px;border-radius:20px}.links a:hover{background:#ffd166}
+.nav-score{background:#2b2b2b;color:#fff;padding:6px 14px;border-radius:20px}
+.hero{max-width:1150px;margin:auto;display:grid;grid-template-columns:1.1fr .9fr;gap:24px;padding:40px 16px;position:relative;z-index:1}
+.badge{background:#fff;border:2px dashed #ff6b6b;border-radius:20px;padding:6px 14px;display:inline-block;font-weight:700}
+.hero h1{font-size:52px;margin:14px 0}.hero h1 span{color:#e63946;background:linear-gradient(#ffe66d,#ffd166);padding:0 12px;border-radius:14px}
+.hero p{font-size:19px;color:#555}
+.btn{display:inline-block;border:none;cursor:pointer;text-decoration:none;padding:12px 26px;border-radius:30px;font-weight:800;font-size:17px}
+.btn.primary{background:linear-gradient(135deg,#ff6b6b,#ff9f1c);color:#fff;box-shadow:0 6px 0 #c0392b}
+.btn.ghost{background:#fff;border:3px solid #2b2b2b;color:#2b2b2b}
+.hero-stats{display:flex;gap:12px;margin-top:18px;flex-wrap:wrap}.hero-stats div{background:#fff;border-radius:16px;padding:10px 18px;text-align:center;box-shadow:0 4px 12px rgba(0,0,0,.08);min-width:90px}.hero-stats b{display:block;font-size:24px}
+.hero-art{display:flex;flex-direction:column;gap:16px}
+.mosque{position:relative;background:linear-gradient(180deg,#a8e6ff,#fff);border-radius:28px;height:300px;display:flex;align-items:end;justify-content:center;overflow:hidden;border:4px solid #2b2b2b}
+.mosque .base{font-size:150px}.mosque .dome{position:absolute;top:18px;font-size:60px}
+.cloud{position:absolute;background:#fff;border-radius:30px;width:110px;height:36px;opacity:.95}
+.c1{top:50px;right:20px;animation:drift 5s infinite alternate}.c2{top:100px;left:20px;animation:drift 6s infinite alternate-reverse}
+@keyframes drift{to{transform:translateX(-22px)}}
+.float{position:absolute;font-size:40px;animation:bob 3s infinite ease-in-out}
+.f1{top:30px;left:30px}.f2{top:20px;right:60px}.f3{bottom:70px;left:16px}.f4{bottom:90px;right:16px}
+@keyframes bob{50%{transform:translateY(-14px) rotate(8deg)}}
+.tasbih-card{background:#2b2b2b;color:#fff;border-radius:22px;padding:18px;text-align:center}
+.tasbih-count{font-size:56px;font-weight:900;color:#ffd166}
+.tasbih-btns{display:flex;gap:8px;flex-wrap:wrap;justify-content:center}.tasbih-btns button{border:none;border-radius:20px;padding:8px 14px;font-weight:800;cursor:pointer;background:#ffd166}.tasbih-btns .reset{background:#ff6b6b;color:#fff}
+.section{max-width:1150px;margin:auto;padding:36px 16px;position:relative;z-index:1}
+.section.alt{background:#fff;border-radius:30px;box-shadow:0 8px 30px rgba(0,0,0,.06);margin-top:20px}
+.sec-title{font-size:34px;margin:0}.sec-sub{color:#666;margin-top:4px;font-size:18px}
+.mini-title{margin-top:28px;background:#fff3bf;display:inline-block;padding:6px 16px;border-radius:14px}
+.cards-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:16px}
+.ch-card{text-decoration:none;color:#222;border-radius:22px;padding:20px;border:4px solid #222;transition:.2s;display:block}
+.ch-card:hover{transform:translateY(-6px) rotate(-1deg)}
+.ch-card .emo{font-size:52px}.ch-card span{font-weight:900}
+.red{background:#ff6b6b;color:#fff}.cream{background:#fefae0}.yellow{background:#ffd166}.teal{background:#2ec4b6;color:#fff}.purple{background:#9b5de5;color:#fff}.blue{background:#4cc9f0}
+.flip-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin-top:12px}
+.flip{perspective:800px;cursor:pointer;height:170px}.flip-inner{position:relative;width:100%;height:100%;transition:.6s;transform-style:preserve-3d}.flip.flipped .flip-inner{transform:rotateY(180deg)}
+.face{position:absolute;inset:0;backface-visibility:hidden;border-radius:18px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:10px;font-weight:800;border:3px solid #222}
+.face.front{background:#fff;font-size:20px}.face.front div{font-size:44px}
+.face.back{background:#2b2b2b;color:#ffd166;transform:rotateY(180deg);font-size:15px}
+.islam-pillars{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-top:12px}
+.pillar{background:linear-gradient(180deg,#fff,#ffe66d);border:3px solid #222;border-radius:18px;padding:14px;text-align:center;font-weight:800}.pillar span{background:#e63946;color:#fff;width:30px;height:30px;display:inline-flex;align-items:center;justify-content:center;border-radius:50%;margin-left:6px}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:16px}
+.panel{background:#fffdf5;border:3px solid #222;border-radius:20px;padding:16px}
+.qa-item{background:#f7f7f7;border-radius:12px;margin:8px 0;padding:10px;cursor:pointer;border:2px solid #eee}.qa-item b{color:#d62828}.qa-item .a{display:none;color:#2a9d8f;font-weight:700}.qa-item.open .a{display:block}
+.names-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(90px,1fr));gap:8px;max-height:300px;overflow:auto;margin-top:8px}
+.names-grid div{background:linear-gradient(135deg,#4cc9f0,#4361ee);color:#fff;border-radius:12px;padding:8px;text-align:center;font-weight:800}
+#namesSearch{width:100%;padding:8px;border-radius:12px;border:2px solid #222;margin-top:8px}
+.game-box{background:#e9f5ff;border:3px dashed #4361ee;border-radius:20px;padding:16px;margin-top:16px}
+.quiz-area{margin-top:10px}.quiz-q{background:#fff;border-radius:14px;padding:12px;margin:8px 0;border:2px solid #222}.quiz-q button{margin:4px;padding:8px 14px;border-radius:20px;border:2px solid #222;cursor:pointer;font-weight:700}.quiz-q button.ok{background:#06d6a0;color:#fff}.quiz-q button.no{background:#ef476f;color:#fff}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.tabs button{border:3px solid #222;background:#fff;border-radius:25px;padding:8px 18px;font-weight:800;cursor:pointer;font-size:16px}.tabs button.active{background:#222;color:#ffd166}
+.tab-body{background:#fff;border:3px solid #222;border-radius:20px;padding:18px;margin-top:10px;min-height:180px;font-size:18px}
+.tab-body .big{font-size:60px;text-align:center}
+.checklist-panel{background:#fff9db;border:3px solid #222;border-radius:20px;padding:16px;margin-top:14px}
+.checks{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px}.checks label{background:#fff;border:2px solid #222;border-radius:12px;padding:8px;cursor:pointer;font-weight:700}
+.progress{background:#eee;border-radius:20px;height:18px;margin-top:10px;overflow:hidden}#adabBar{height:100%;width:0;background:linear-gradient(90deg,#06d6a0,#ffd166);transition:.4s}
+.badges-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:14px}
+.badge-card{background:#fff;border:3px solid #222;border-radius:20px;padding:14px;text-align:center}.badge-card .medal{font-size:48px}.badge-card h4{margin:6px 0;color:#d62828}
+.stepper-panel{text-align:center}.big-emoji{font-size:70px}#wuduTitle{font-size:22px;margin:6px 0}.step-btns{display:flex;gap:8px;justify-content:center;margin:8px 0}.step-btns button{padding:8px 18px;border-radius:20px;border:3px solid #222;font-weight:800;cursor:pointer}.step-btns .primary{background:#2ec4b6;color:#fff}
+.dots{display:flex;gap:6px;justify-content:center;flex-wrap:wrap}.dots i{width:12px;height:12px;border-radius:50%;background:#ddd;display:block}.dots i.on{background:#e63946}
+.prayer-times div{background:#f1faee;border:2px solid #222;border-radius:12px;padding:8px;margin:6px 0;display:flex;justify-content:space-between;align-items:center;font-weight:800}.prayer-times b{background:#e63946;color:#fff;border-radius:10px;padding:2px 12px}
+.hajj-flow{display:flex;flex-wrap:wrap;gap:6px}.hajj-flow span{background:#222;color:#fff;font-size:13px;border-radius:20px;padding:4px 10px}
+.nice-list{padding-right:18px}.nice-list li{margin:6px 0}
+input[type=number],input[type=text]{padding:10px;border-radius:12px;border:2px solid #222;font-size:16px;width:100%;margin:6px 0}
+.result{font-weight:900;color:#2a9d8f;font-size:19px}
+.aya{background:#fffbe6;border:2px solid #d4a017;border-radius:14px;padding:10px;margin:8px 0;cursor:pointer}.aya .t{font-size:20px;font-weight:800}.aya .m{display:none;color:#444}.aya.open .m{display:block;background:#fff;padding:8px;border-radius:10px;margin-top:6px}
+.final-quiz{background:linear-gradient(135deg,#3a0ca3,#4361ee);color:#fff;border-radius:30px}
+.final-quiz .sec-sub{color:#ddd}.quiz-controls{display:flex;gap:10px;margin:10px 0}
+#bigQuiz .quiz-q{color:#222}#quizResult{font-size:22px;font-weight:900;margin-top:10px}
+footer{text-align:center;padding:26px;color:#777;position:relative;z-index:1}
+@media(max-width:800px){.hero{grid-template-columns:1fr}.hero h1{font-size:36px}.two-col{grid-template-columns:1fr}}
