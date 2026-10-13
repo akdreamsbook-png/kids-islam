@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apprendre l'Islam aux enfants | Voyage amusant</title>
+<link rel="stylesheet" href="style.css">
+<style>body{direction:ltr}.pillar span{margin-right:6px;margin-left:0}.nice-list{padding-left:18px;padding-right:0}</style>
+</head>
+<body>
+
+<div class="stars-bg"></div>
+
+<header class="navbar">
+  <div class="nav-inner">
+    <div class="logo">🌙 <span>Enfants Musulmans</span> <small>Apprendre l'Islam en s'amusant</small></div>
+    <nav class="links">
+      <a href="#home">Accueil</a>
+      <a href="#chapters">Sections</a>
+      <a href="#iman">Foi</a>
+      <a href="#adab">Bienséance</a>
+      <a href="#solouk">Comportement</a>
+      <a href="#ibadat">Adorations</a>
+      <a href="#tafsir">Exégèse</a>
+      <a href="#quiz">Quiz</a>
+    </nav>
+    <div class="nav-score">⭐ Mes points : <b id="totalStars">0</b></div>
+    <a href="index.html" class="btn ghost" style="padding:6px 14px">AR 🇸🇦</a>
+  </div>
+</header>
+
+<section id="home" class="hero">
+  <div class="hero-text">
+    <div class="badge">📚 Livre « Apprendre l'Islam aux enfants » — 4e édition</div>
+    <h1>Apprends ta religion <span>en jouant</span> ! 🕌</h1>
+    <p>Un voyage interactif : foi • bienséance • comportement • adorations • Coran. Cartes, jeux, quiz et étoiles !</p>
+    <div class="hero-btns">
+      <a href="#chapters" class="btn primary">🚀 Commencer</a>
+      <a href="#quiz" class="btn ghost">🎮 Me tester</a>
+    </div>
+    <div class="hero-stats">
+      <div><b>6</b><span>sections</span></div>
+      <div><b>+118</b><span>questions</span></div>
+      <div><b>+30</b><span>activités</span></div>
+      <div><b>⭐</b><span>étoiles</span></div>
+    </div>
+  </div>
+  <div class="hero-art">
+    <div class="mosque">
+      <div class="base">🕌</div>
+      <div class="cloud c1"></div>
+      <div class="cloud c2"></div>
+      <div class="float f1">📖</div>
+      <div class="float f2">⭐</div>
+      <div class="float f3">🤲</div>
+      <div class="float f4">🕋</div>
+    </div>
+    <div class="tasbih-card">
+      <h3>📿 Mon chapelet électronique</h3>
+      <div class="tasbih-count" id="tasbihCount">0</div>
+      <div class="tasbih-btns">
+        <button onclick="tasbih('Soubhan Allah')">Soubhan Allah</button>
+        <button onclick="tasbih('Alhamdou lillah')">Alhamdou lillah</button>
+        <button onclick="tasbih('Allahou Akbar')">Allahou Akbar</button>
+        <button class="reset" onclick="tasbihReset()">Zéro</button>
+      </div>
+      <small id="tasbihZikr">Clique sur une invocation 🌟</small>
+    </div>
+  </div>
+</section>
+
+<section id="chapters" class="section">
+  <h2 class="sec-title">🗺️ Carte du voyage</h2>
+  <p class="sec-sub">Choisis une section ! Chacune contient leçons + jeu + quiz</p>
+  <div class="cards-grid">
+    <a href="#iman" class="ch-card red"><div class="emo">🕌</div><h3>Foi et croyance</h3><p>Piliers de la foi • Tawhid • Anges • Messagers • Noms d'Allah</p><span>Entrer →</span></a>
+    <a href="#adab" class="ch-card cream"><div class="emo">🤲</div><h3>Bienséance</h3><p>Mosquée • Salutations • Nourriture • Sommeil • Éternuement</p><span>Entrer →</span></a>
+    <a href="#solouk" class="ch-card yellow"><div class="emo">😊</div><h3>Comportement</h3><p>Parole • Colère • Honnêteté • Parents • Voisins • Maître</p><span>Entrer →</span></a>
+    <a href="#ibadat" class="ch-card teal"><div class="emo">🕋</div><h3>Adorations</h3><p>Ablutions • Prière • Zakat • Jeûne • Hajj pas à pas</p><span>Entrer →</span></a>
+    <a href="#tafsir" class="ch-card purple"><div class="emo">📖</div><h3>Exégèse et Coran</h3><p>Al-Fatiha • Ayat al-Koursi • Ad-Douha expliquées</p><span>Entrer →</span></a>
+    <a href="#quiz" class="ch-card blue"><div class="emo">🎮</div><h3>Grand défi</h3><p>Quiz général + vrai/faux + gagne des étoiles</p><span>Jouer →</span></a>
+  </div>
+</section>
+
+<section id="iman" class="section alt">
+  <h2 class="sec-title">🌙 1. Foi et croyance</h2>
+  <p class="sec-sub">Le Prophète ﷺ a dit : « La foi, c'est croire en Allah, Ses anges, Ses Livres, Ses messagers, au Jour dernier et au destin, en bien et en mal »</p>
+  <h3 class="mini-title">🧱 Les 6 piliers de la foi — clique pour retourner la carte</h3>
+  <div class="flip-grid" id="imanGrid"></div>
+  <h3 class="mini-title">🕌 Les 5 piliers de l'Islam</h3>
+  <div class="islam-pillars">
+    <div class="pillar"><span>1</span>Chahada<br><small>Il n'y a de dieu qu'Allah</small></div>
+    <div class="pillar"><span>2</span>Prière<br><small>5 prières par jour</small></div>
+    <div class="pillar"><span>3</span>Zakat<br><small>pour les pauvres</small></div>
+    <div class="pillar"><span>4</span>Jeûne<br><small>mois de Ramadan</small></div>
+    <div class="pillar"><span>5</span>Hajj<br><small>pour qui le peut</small></div>
+  </div>
+  <div class="two-col">
+    <div class="panel">
+      <h3>❓ Questions-réponses — Qui est ton Seigneur ?</h3>
+      <div class="qa" id="qaList"></div>
+    </div>
+    <div class="panel">
+      <h3>✨ Les Noms d'Allah <input id="namesSearch" placeholder="Chercher un nom... 🔍"></h3>
+      <div class="names-grid" id="namesGrid"></div>
+      <small>« Allah a 99 noms, qui les apprend entrera au Paradis »</small>
+    </div>
+  </div>
+  <div class="game-box">
+    <h3>🎯 Jeu : retiens les piliers de la foi dans l'ordre !</h3>
+    <button class="btn primary" onclick="startMiniQuiz('iman')">Quiz de la foi ⭐</button>
+    <div class="quiz-area" id="quiz-iman"></div>
+  </div>
+</section>
+
+<section id="adab" class="section">
+  <h2 class="sec-title">🤲 2. Bienséance islamique</h2>
+  <p class="sec-sub">De belles manières pour vivre en bon musulman chaque jour</p>
+  <div class="tabs" id="adabTabs">
+    <button class="active" data-t="masjid">🕌 Mosquée</button>
+    <button data-t="salam">👋 Salutations</button>
+    <button data-t="food">🍎 Nourriture</button>
+    <button data-t="sleep">😴 Sommeil</button>
+    <button data-t="atk">🤧 Éternuement</button>
+    <button data-t="libas">👕 Vêtements</button>
+  </div>
+  <div class="tab-body" id="adabBody"></div>
+  <div class="checklist-panel">
+    <h3>✅ Défi du jour — coche ce que tu as fait !</h3>
+    <div class="checks" id="adabChecks"></div>
+    <div class="progress"><div id="adabBar"></div></div>
+    <p id="adabMsg">Termine les tâches pour gagner l'étoile du jour ! 🌟</p>
+  </div>
+</section>
+
+<section id="solouk" class="section alt">
+  <h2 class="sec-title">😊 3. Comportement et morale</h2>
+  <p class="sec-sub">« Le croyant n'est ni moqueur, ni maudisseur, ni grossier »</p>
+  <div class="badges-grid">
+    <div class="badge-card"><div class="medal">🏅</div><h4>Je suis musulman<br>je ne médis pas</h4><p>La médisance, c'est comme manger la chair de ton frère mort !</p></div>
+    <div class="badge-card"><div class="medal">🏅</div><h4>Je suis musulman<br>langue pure</h4><p>Ni insultes ni malédictions : j'invoque le bien 🌷</p></div>
+    <div class="badge-card"><div class="medal">🏅</div><h4>Je suis musulman<br>je dis inch'Allah</h4><p>Quand je promets quelque chose pour l'avenir</p></div>
+    <div class="badge-card"><div class="medal">🏅</div><h4>Je suis musulman<br>j'évite la colère</h4><p>En colère ? Je fais mes ablutions et je me tais</p></div>
+    <div class="badge-card"><div class="medal">🏅</div><h4>Je suis musulman<br>je ne mens pas</h4><p>La vérité mène au Paradis, le mensonge à l'Enfer</p></div>
+    <div class="badge-card"><div class="medal">🏅</div><h4>Je suis musulman<br>bon envers mes parents</h4><p>Ta mère, puis ta mère, puis ta mère, puis ton père ❤️</p></div>
+    <div class="badge-card"><div class="medal">🏅</div><h4>Je suis musulman<br>liens familiaux</h4><p>Je visite ma famille, je l'aide et je partage sa joie</p></div>
+    <div class="badge-card"><div class="medal">🏅</div><h4>Je suis musulman<br>je respecte mon maître</h4><p>J'écoute, je demande la permission, je fais mes devoirs 📚</p></div>
+  </div>
+  <div class="game-box">
+    <h3>🎲 Jeu des situations : que fais-tu ?</h3>
+    <div id="situationGame"></div>
+  </div>
+</section>
+
+<section id="ibadat" class="section">
+  <h2 class="sec-title">🕋 4. Adorations — pas à pas</h2>
+  <div class="two-col">
+    <div class="panel stepper-panel">
+      <h3>💧 Les ablutions <span id="wuduStepLabel">1 / 8</span></h3>
+      <div class="big-emoji" id="wuduEmoji">🙏</div>
+      <h4 id="wuduTitle"></h4><p id="wuduDesc"></p>
+      <div class="step-btns"><button onclick="wuduMove(-1)">← Avant</button><button class="primary" onclick="wuduMove(1)">Suivant →</button></div>
+      <div class="dots" id="wuduDots"></div>
+    </div>
+    <div class="panel stepper-panel">
+      <h3>🕌 Les 5 prières</h3>
+      <div class="prayer-times">
+        <div>🌅 Fajr <small>aube → lever</small> <b>2</b></div>
+        <div>☀️ Dhuhr <small>après midi</small> <b>4</b></div>
+        <div>🌤️ Asr <small>après-midi</small> <b>4</b></div>
+        <div>🌇 Maghrib <small>coucher</small> <b>3</b></div>
+        <div>🌙 Icha <small>jusqu'à minuit</small> <b>4</b></div>
+      </div>
+      <h3>🕋 Étapes du Hajj (12)</h3>
+      <div class="hajj-flow" id="hajjFlow"></div>
+    </div>
+  </div>
+  <div class="two-col">
+    <div class="panel">
+      <h3>💰 Calculatrice de Zakat</h3>
+      <p>Zakat = montant ÷ 40 (2,5 %) si le seuil est atteint depuis un an lunaire</p>
+      <input type="number" id="zakatInput" placeholder="Ex : 4000">
+      <button class="btn primary" onclick="calcZakat()">Calculer 🧮</button>
+      <p id="zakatOut" class="result"></p>
+    </div>
+    <div class="panel">
+      <h3>🌙 Jeûne et jeûnes surérogatoires</h3>
+      <ul class="nice-list">
+        <li>🍽️ Ramadan : ni manger ni boire de l'aube au coucher</li>
+        <li>🕋 Jour de Arafat — 🕊️ Achoura (10 Mouharram)</li>
+        <li>🌙 6 jours de Chawwal — 📅 Lundis et jeudis</li>
+        <li>🌕 Jours blancs 13-14-15 — 🤲 Beaucoup jeûner en Chaaban</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="tafsir" class="section alt">
+  <h2 class="sec-title">📖 5. Exégèse des courtes sourates</h2>
+  <p class="sec-sub">On mémorise et on comprend — clique sur le verset pour voir son sens</p>
+  <div class="tabs" id="tafsirTabs">
+    <button class="active" data-t="fatiha">Al-Fatiha</button>
+    <button data-t="kursi">Ayat al-Koursi</button>
+    <button data-t="duha">Ad-Douha</button>
+  </div>
+  <div class="tab-body" id="tafsirBody"></div>
+</section>
+
+<section id="quiz" class="section final-quiz">
+  <h2 class="sec-title">🎮 Grand défi — teste-toi et gagne des étoiles ⭐</h2>
+  <p class="sec-sub">10 questions sur tout le livre. Chaque bonne réponse = une étoile !</p>
+  <div class="quiz-controls">
+    <button class="btn primary" onclick="startBigQuiz()">🚀 Commencer</button>
+    <button class="btn ghost" onclick="resetStars()">🗑️ Zéro</button>
+  </div>
+  <div id="bigQuiz"></div>
+  <div id="quizResult"></div>
+</section>
+
+<footer>
+  <p>🌙 Site <b>Apprendre l'Islam aux enfants</b> — d'après le livre de Mohammed Ibn Chams ad-Din (4e édition) • Fait avec amour ❤️</p>
+  <p><small>Foi • Bienséance • Comportement • Adorations • Exégèse — interactif, gratuit, hors-ligne</small></p>
+</footer>
+
+<script src="app-fr.js"></script>
+</body>
+</html>
